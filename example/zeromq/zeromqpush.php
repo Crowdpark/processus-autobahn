@@ -19,8 +19,8 @@ echo "Connection time: " . $execTime . PHP_EOL;
 
 echo "=== ZMQ Socket Connected===" . PHP_EOL;
 
-$startTime = microtime(true) . PHP_EOL;
-$totalMessages = 10;
+$startTime = microtime(true);
+$totalMessages = 19000;
 for ($i = 0; $i <= $totalMessages; $i++) {
 
     $mqData = array(
