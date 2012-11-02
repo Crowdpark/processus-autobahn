@@ -1,11 +1,36 @@
 Autobahn
 ==================
 
-Autobahn is a german word for highway.
+Autobahn is a german word for highway. A highway has multiple driving lines (channels). To get into the highway you have to
+to choose a driveway(zeromq/amqp). If you want to drive you need a vehicle (package).
+
+I hope the description is clear :D.
+
+##Requirements
+
+- RabbitMq
+- zmq
+- php-zmq
+- php-amqp
+
+If you want to test both protocol's choose what ever you want.
+You can install your **libs** // **c-bindings** via brew or pecl.
 
 ##What is this?
 
-##Example
+This lib support 2 MQ **protocols**.  
+1. AMQP     -> RabbitMQ (complex task)  :: External API calls  
+2. ZeroMQ   -> Raw (fire and forget)    :: Logging / Tracking  
+
+Both has his benefit's. And actually we using both for different usecases.
+
+##Example Script
+
+To test how your environment works with amqp and zeromq.
+
+##Extending
+
+
 
 ##License
 

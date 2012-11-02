@@ -13,6 +13,5 @@ class Autobahn
     {
         $auffahrt = new \Processus\Spur\Amqp\Auffahrt();
         $auffahrt->connect("192.168.42.179", null, null);
-
     }
 }

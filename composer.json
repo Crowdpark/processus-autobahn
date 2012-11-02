@@ -1,0 +1,14 @@
+{
+    "name":"processus/autobahn",
+    "type":"library",
+    "keywords":["amqp", "zeromq"],
+    "homepage":"https://github.com/FrancisVarga/processus-autobahn",
+    "license":"MIT",
+    "description":"multiple qm lib support (amqp and zeromq)",
+    "autoload":{
+        "psr-0":{
+            "Processus\\":"src/"
+        }
+    },
+    "minimum-stability":"dev"
+}

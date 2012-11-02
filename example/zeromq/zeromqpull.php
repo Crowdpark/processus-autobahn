@@ -9,7 +9,6 @@
 $socket = new \ZMQSocket(new \ZMQContext(), \ZMQ::SOCKET_PULL);
 $socket->bind("tcp://*:5555");
 
-/* Loop receiving and echoing back */
 while (TRUE) {
 
     usleep(500);
