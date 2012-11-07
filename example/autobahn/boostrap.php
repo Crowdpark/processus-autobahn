@@ -11,7 +11,7 @@ $sourceFolder = '../../src/Processus/Autobahn/';
 
 require $sourceFolder . 'Autobahn.php';
 require $sourceFolder . 'Interfaces/AuffahrtInterface.php';
-require $sourceFolder . 'Interfaces/AutoInterface.php';
+require $sourceFolder . 'Interfaces/VehicleInterface.php';
 require $sourceFolder . 'Interfaces/FahrbahnInterface.php';
 require $sourceFolder . 'Spur/Amqp/Auffahrt.php';
 require $sourceFolder . 'Spur/Amqp/Fahrbahn.php';
