@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Autobahn\Interfaces;
-class FahrbahnInterface
+interface FahrbahnInterface
 {
 
 }
