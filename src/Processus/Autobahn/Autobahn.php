@@ -9,9 +9,47 @@
 namespace Processus\Autobahn;
 class Autobahn
 {
-    public function amqpAuffahrt()
+
+    /**
+     * @var \Processus\Autobahn\Interfaces\AuffahrtInterface
+     */
+    private $auffahrt;
+
+    /**
+     * @param \Processus\Autobahn\Interfaces\AuffahrtInterface $auffahrt
+     */
+    public function setAuffahrt($auffahrt)
     {
-        $auffahrt = new \Processus\Spur\Amqp\Auffahrt();
-        $auffahrt->connect("192.168.42.179", null, null);
+        $this->auffahrt = $auffahrt;
     }
+
+    /**
+     * @return \Processus\Autobahn\Interfaces\AuffahrtInterface
+     */
+    public function getAuffahrt()
+    {
+        return $this->auffahrt;
+    }
+
+    /**
+     * @param \Processus\Autobahn\Interfaces\FahrbahnInterface $fahrbahn
+     */
+    public function setFahrbahn($fahrbahn)
+    {
+        $this->fahrbahn = $fahrbahn;
+    }
+
+    /**
+     * @return \Processus\Autobahn\Interfaces\FahrbahnInterface
+     */
+    public function getFahrbahn()
+    {
+        return $this->fahrbahn;
+    }
+
+    /**
+     * @var \Processus\Autobahn\Interfaces\FahrbahnInterface
+     */
+    private $fahrbahn;
+
 }
