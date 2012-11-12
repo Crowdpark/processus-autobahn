@@ -11,7 +11,7 @@ echo "=== ZMQ Socket Start===" . PHP_EOL;
 $startTime = microtime(true) . PHP_EOL;
 
 $queue = new \ZMQSocket(new \ZMQContext(), \ZMQ::SOCKET_PUSH, "MySock1");
-$queue->connect("tcp://192.168.42.179:5555");
+$queue->connect("tcp://127.0.0.1:5555");
 
 $endTime = microtime(true);
 $execTime = $endTime - $startTime;

@@ -6,8 +6,6 @@
  * Time: 5:34 PM
  * To change this template use File | Settings | File Templates.
  */
-require "boostrap.php";
-
 class Case1
 {
     public function __construct()
