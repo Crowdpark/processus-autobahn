@@ -13,65 +13,69 @@ interface AuffahrtInterface
      * @param \string $host
      * @return mixed
      */
-    function setHost(\string $host);
+    public function setHost(\string $host);
 
     /**
      * @return \string
      */
-    function getHost();
+    public function getHost();
 
     /**
      * @param \string $port
      * @return mixed
      */
-    function setPort(\string $port);
+    public function setPort(\string $port);
 
     /**
      * @return mixed
      */
-    function getPort();
+    public function getPort();
 
     /**
      * @param \string $username
      * @param \string $password
      * @return mixed
      */
-    function setCredentials(\string $username, \string $password);
+    public function setCredentials(\string $username, \string $password);
 
     /**
      * @return \string
      */
-    function getUsername();
+    public function getUsername();
 
     /**
      * @param \string $username
      * @return mixed
      */
-    function setUsername(\string $username);
+    public function setUsername(\string $username);
 
     /**
      * @param \string $password
      * @return mixed
      */
-    function setPassword(\string $password);
+    public function setPassword(\string $password);
 
     /**
      * @return mixed
      */
-    function getPassword();
+    public function getPassword();
 
     /**
      * @return mixed
      */
-    function getCredentials();
+    public function getCredentials();
+
+    /**
+     * @param string $host
+     * @param string $port
+     * @param string $username
+     * @param string $password
+     * @return mixed
+     */
+    public function connect($host = "127.0.0.1", $port = "5555", $username = "root", $password = "root");
 
     /**
      * @return boolean
      */
-    function connect();
-
-    /**
-     * @return boolean
-     */
-    function isConnected();
+    public function isConnected();
 }

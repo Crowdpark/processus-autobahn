@@ -10,4 +10,20 @@ namespace Processus\Autobahn\Interfaces;
 interface FahrbahnInterface
 {
 
+    /**
+     * @param AuffahrtInterface $auffahrt
+     * @return FahrbahnInterface
+     */
+    public function setAuffahrt(AuffahrtInterface $auffahrt);
+
+    /**
+     * @return mixed
+     */
+    public function getAuffahrt();
+
+    /**
+     * @param VehicleInterface $vehicle
+     * @return \Processus\Autobahn\Autobahn
+     */
+    public function setVehicle(VehicleInterface $vehicle);
 }

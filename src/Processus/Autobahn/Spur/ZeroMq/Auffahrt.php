@@ -7,164 +7,119 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Spur\ZeroMq;
-class Auffahrt
+class Auffahrt implements \Processus\Autobahn\Interfaces\AuffahrtInterface
 {
 
-    /**
-     * @var \AMQPConnection
-     */
-    private $_connection;
-
-    /**
-     * @var \string
-     */
-    private $_login;
-
-    /**
-     * @var \string
-     */
-    private $_password;
-
-    /**
-     * @var \string
-     */
-    private $_port;
-
-    /**
-     * @var \string
-     */
-    private $_vhost;
-
-    /**
-     * @param string $vhost
-     */
-    public function setVhost($vhost)
-    {
-        $this->_vhost = $vhost;
-    }
-
-    /**
-     * @return string
-     */
-    public function getVhost()
-    {
-        return $this->_vhost;
-    }
+    private $host;
+    private $port;
 
     /**
      * @param string $host
+     * @return mixed|Auffahrt
      */
-    public function setHost($host)
+    public function setHost(\string $host)
     {
-        $this->_host = $host;
+        // TODO: Implement setHost() method.
+        return $this;
     }
 
     /**
-     * @return string
+     * @return \string
      */
     public function getHost()
     {
-        return $this->_host;
+        // TODO: Implement getHost() method.
     }
 
     /**
      * @param string $port
+     * @return mixed|Auffahrt
      */
-    public function setPort($port)
+    public function setPort(\string $port)
     {
-        $this->_port = $port;
+        return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getPort()
     {
-        return $this->_port;
+        // TODO: Implement getPort() method.
     }
 
     /**
-     * @var \string
+     * @param \string $username
+     * @param \string $password
+     * @return mixed
      */
-    private $_host;
+    public function setCredentials(\string $username, \string $password)
+    {
+        // TODO: Implement setCredentials() method.
+        return $this;
+    }
+
+    /**
+     * @return \string
+     */
+    public function getUsername()
+    {
+        // TODO: Implement getUsername() method.
+    }
+
+    /**
+     * @param \string $username
+     * @return mixed
+     */
+    public function setUsername(\string $username)
+    {
+        // TODO: Implement setUsername() method.
+    }
+
+    /**
+     * @param string $password
+     * @return mixed|Auffahrt
+     */
+    public function setPassword(\string $password)
+    {
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    function getPassword()
+    {
+        // TODO: Implement getPassword() method.
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCredentials()
+    {
+        // TODO: Implement getCredentials() method.
+    }
 
     /**
      * @param string $host
-     * @param string $login
+     * @param string $port
+     * @param string $username
      * @param string $password
-     * @return \AMQPConnection
+     * @return mixed
      */
-    public function connect($host = "127.0.0.1", $login = "guest", $password = "guest")
+    public function connect($host = "127.0.0.1", $port = "5555", $username = "root", $password = "root")
     {
-        $this->setLogin($login)
-            ->setPassword($password)
-            ->setHost($host);
-
-        $this->getConnection()->connect();
-
-        return $this->getConnection();
-    }
-
-    /**
-     * @param $login
-     * @return Auffahrt
-     */
-    public function setLogin($login)
-    {
-        $this->_login = $login;
+        $this->connected = true;
 
         return $this;
     }
 
     /**
-     * @return string
+     * @return boolean
      */
-    public function getLogin()
+    public function isConnected()
     {
-        return $this->_login;
+        // TODO: Implement isConnected() method.
     }
-
-    /**
-     * @param $password
-     * @return Auffahrt
-     */
-    public function setPassword($password)
-    {
-        $this->_password = $password;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->_password;
-    }
-
-    /**
-     * @param $connection
-     */
-    public function setConnection($connection)
-    {
-        $this->_connection = $connection;
-    }
-
-    /**
-     * @return \AMQPConnection
-     */
-    public function getConnection()
-    {
-        if (!$this->_connection) {
-            $amqpConnection = new \AMQPConnection();
-            $amqpConnection->setLogin($this->getLogin());
-            $amqpConnection->setPassword($this->getPassword());
-            $amqpConnection->setHost($this->getHost());
-            $amqpConnection->setVhost($this->getVhost());
-        }
-
-        return $this->_connection;
-    }
-
 }

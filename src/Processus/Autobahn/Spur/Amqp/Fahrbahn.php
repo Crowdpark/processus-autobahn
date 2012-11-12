@@ -6,7 +6,7 @@
  * Time: 11:30 AM
  * To change this template use File | Settings | File Templates.
  */
-namespace Processus\Spur;
+namespace Processus\Spur\Amqp;
 class Fahrbahn
 {
 
