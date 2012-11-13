@@ -6,6 +6,8 @@
  * Time: 5:34 PM
  * To change this template use File | Settings | File Templates.
  */
+require __DIR__ . "/../../vendor/autoload.php";
+
 class Case1
 {
     public function __construct()

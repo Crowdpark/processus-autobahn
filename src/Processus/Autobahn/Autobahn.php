@@ -7,6 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Autobahn;
+
 class Autobahn
 {
 
@@ -59,14 +60,17 @@ class Autobahn
     }
 
     /**
-     * @param Interfaces\VehicleInterface $vehicle
+     * @param $data
+     * @throws \Exception
      */
-    public function drive(\Processus\Autobahn\Interfaces\VehicleInterface $vehicle = null)
+    public function drive($data)
     {
 
-        if ($vehicle) {
-            $this->getFahrbahn()->setVehicle($vehicle)
-                ->drive();
+        if ($data) {
+            $vehilce = new \Processus\Autobahn\Base\BaseVehicle($data);
+            $this->getFahrbahn()->setVehicle($vehilce);
+        } else {
+            throw new \Exception("Data are not set or not in form!");
         }
 
     }

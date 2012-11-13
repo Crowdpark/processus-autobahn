@@ -7,13 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Autobahn\Interfaces;
+
 interface AuffahrtInterface
 {
     /**
      * @param \string $host
      * @return mixed
      */
-    public function setHost(\string $host);
+    public function setHost($host);
 
     /**
      * @return \string
@@ -24,7 +25,7 @@ interface AuffahrtInterface
      * @param \string $port
      * @return mixed
      */
-    public function setPort(\string $port);
+    public function setPort($port);
 
     /**
      * @return mixed
@@ -66,16 +67,23 @@ interface AuffahrtInterface
     public function getCredentials();
 
     /**
-     * @param string $host
-     * @param string $port
-     * @param string $username
-     * @param string $password
      * @return mixed
      */
-    public function connect($host = "127.0.0.1", $port = "5555", $username = "root", $password = "root");
+    public function connect();
 
     /**
      * @return boolean
      */
     public function isConnected();
+
+    /**
+     * @param $type
+     * @return mixed
+     */
+    public function setType($type);
+
+    /**
+     * @return mixed
+     */
+    public function getType();
 }

@@ -1,6 +1,54 @@
 {
-    "hash": "e626baa95865f4ab4dbd09ed980359f3",
+    "hash": "e2fa13266a92d7e402c0d3912e4c9a0e",
     "packages": [
+        {
+            "name": "processus/spl",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Crowdpark/processus-spl.git",
+                "reference": "72392d81a896355725a0522fa0edabf3fa55bce2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Crowdpark/processus-spl/archive/72392d81a896355725a0522fa0edabf3fa55bce2.zip",
+                "reference": "72392d81a896355725a0522fa0edabf3fa55bce2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "1352813470",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Processus\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis Varga",
+                    "email": "fv@crowdpark.com",
+                    "homepage": "http://www.crowdpark.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Standard lib for all Processus modules",
+            "homepage": "http://github.com/Crowdpark/processus-spl",
+            "keywords": [
+                "library",
+                "standard",
+                "library"
+            ],
+            "support": {
+                "issues": "https://github.com/Crowdpark/processus-spl/issues",
+                "source": "https://github.com/Crowdpark/processus-spl/tree/master"
+            }
+        },
         {
             "name": "symfony/config",
             "version": "2.1.x-dev",
@@ -101,7 +149,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "processus/spl": 20
+    }
 }

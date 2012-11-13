@@ -7,7 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Autobahn\Base;
-class BaseVehicle implements \Processus\Autobahn\Interfaces\VehicleInterface
-{
 
+class BaseVehicle extends \Processus\Spl\Base\BaseVo implements \Processus\Autobahn\Interfaces\VehicleInterface
+{
+    public function __construct($rawData = null)
+    {
+        if (isset($rawData)) {
+            $this->setData($rawData);
+        }
+
+    }
 }

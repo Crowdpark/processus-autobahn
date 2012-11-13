@@ -6,9 +6,20 @@
  * Time: 11:30 AM
  * To change this template use File | Settings | File Templates.
  */
-namespace Processus\Spur\ZeroMq;
+namespace Processus\Autobahn\Spur\ZeroMq;
+
 class Fahrbahn implements \Processus\Autobahn\Interfaces\FahrbahnInterface
 {
+
+    /**
+     * @var \Processus\Autobahn\Interfaces\AuffahrtInterface
+     */
+    private $auffahrt;
+
+    /**
+     * @var \Processus\Autobahn\Interfaces\VehicleInterface
+     */
+    private $vehicle;
 
     /**
      * @param \Processus\Autobahn\Interfaces\AuffahrtInterface $auffahrt
@@ -16,15 +27,17 @@ class Fahrbahn implements \Processus\Autobahn\Interfaces\FahrbahnInterface
      */
     public function setAuffahrt(\Processus\Autobahn\Interfaces\AuffahrtInterface $auffahrt)
     {
-        // TODO: Implement setAuffahrt() method.
+        $this->auffahrt = $auffahrt;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return mixed|\Processus\Autobahn\Interfaces\AuffahrtInterface
      */
     public function getAuffahrt()
     {
-        // TODO: Implement getAuffahrt() method.
+        return $this->auffahrt;
     }
 
     /**
@@ -33,6 +46,17 @@ class Fahrbahn implements \Processus\Autobahn\Interfaces\FahrbahnInterface
      */
     public function setVehicle(\Processus\Autobahn\Interfaces\VehicleInterface $vehicle)
     {
+        $this->vehicle = $vehicle;
+
+        return $this;
+    }
+
+    public function push(\Processus\Autobahn\Interfaces\VehicleInterface $vehicle = null)
+    {
+        if ($vehicle) {
+            $this->vehicle = $vehicle;
+        }
+
 
     }
 }

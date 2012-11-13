@@ -4,16 +4,23 @@
     "keywords":["amqp", "zeromq"],
     "homepage":"https://github.com/FrancisVarga/processus-autobahn",
     "license":"MIT",
-    "description":"multiple qm lib support (amqp and zeromq)",
+    "description":"qm lib support (amqp and zeromq)",
     "autoload":{
         "psr-0":{
             "Processus\\":"src/"
         }
     },
+    "repositories":[
+        {
+            "type":"vcs",
+            "url":"https://github.com/Crowdpark/processus-spl.git"
+        }
+    ],
     "require":{
         "php":">=5.3",
         "symfony/console":"2.1.*",
-        "symfony/config":"2.1.*"
+        "symfony/config":"2.1.*",
+        "processus/spl":"dev-master"
     },
     "minimum-stability":"dev"
 }

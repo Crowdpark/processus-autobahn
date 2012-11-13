@@ -7,7 +7,8 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace Processus\Autobahn\Interfaces;
-interface VehicleInterface
+
+interface VehicleInterface extends \Processus\Spl\Base\DataVoInterface
 {
-    public function setRawData($data);
+
 }

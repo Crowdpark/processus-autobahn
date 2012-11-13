@@ -6,20 +6,27 @@
  * Time: 11:25 AM
  * To change this template use File | Settings | File Templates.
  */
-namespace Processus\Spur\ZeroMq;
+namespace Processus\Autobahn\Spur\ZeroMq;
+
 class Auffahrt implements \Processus\Autobahn\Interfaces\AuffahrtInterface
 {
 
     private $host;
+
     private $port;
+
+    private $connected;
+
+    private $type;
 
     /**
      * @param string $host
      * @return mixed|Auffahrt
      */
-    public function setHost(\string $host)
+    public function setHost($host)
     {
-        // TODO: Implement setHost() method.
+        $this->host = $host;
+
         return $this;
     }
 
@@ -28,15 +35,17 @@ class Auffahrt implements \Processus\Autobahn\Interfaces\AuffahrtInterface
      */
     public function getHost()
     {
-        // TODO: Implement getHost() method.
+        return $this->host;
     }
 
     /**
      * @param string $port
      * @return mixed|Auffahrt
      */
-    public function setPort(\string $port)
+    public function setPort($port)
     {
+        $this->port = $port;
+
         return $this;
     }
 
@@ -45,70 +54,71 @@ class Auffahrt implements \Processus\Autobahn\Interfaces\AuffahrtInterface
      */
     public function getPort()
     {
-        // TODO: Implement getPort() method.
+        return $this->port;
     }
 
     /**
-     * @param \string $username
-     * @param \string $password
-     * @return mixed
+     * @param string $username
+     * @param string $password
+     * @return mixed|void
+     * @throws \Processus\Spl\Exceptions\FunctionNotImplementedException
      */
     public function setCredentials(\string $username, \string $password)
     {
-        // TODO: Implement setCredentials() method.
-        return $this;
+        throw new \Processus\Spl\Exceptions\FunctionNotImplementedException();
     }
 
     /**
-     * @return \string
+     * @return string|void
+     * @throws \Processus\Spl\Exceptions\FunctionNotImplementedException
      */
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
+        throw new \Processus\Spl\Exceptions\FunctionNotImplementedException();
     }
 
     /**
-     * @param \string $username
-     * @return mixed
+     * @param string $username
+     * @return mixed|void
+     * @throws \Processus\Spl\Exceptions\FunctionNotImplementedException
      */
     public function setUsername(\string $username)
     {
-        // TODO: Implement setUsername() method.
+        throw new \Processus\Spl\Exceptions\FunctionNotImplementedException();
     }
 
     /**
      * @param string $password
-     * @return mixed|Auffahrt
+     * @return mixed|void
+     * @throws \Processus\Spl\Exceptions\FunctionNotImplementedException
      */
     public function setPassword(\string $password)
     {
-        return $this;
+        throw new \Processus\Spl\Exceptions\FunctionNotImplementedException();
     }
 
     /**
-     * @return mixed
+     * @return mixed|void
+     * @throws \Processus\Spl\Exceptions\FunctionNotImplementedException
      */
-    function getPassword()
+    public function getPassword()
     {
-        // TODO: Implement getPassword() method.
+        throw new \Processus\Spl\Exceptions\FunctionNotImplementedException();
     }
 
     /**
-     * @return mixed
+     * @return mixed|void
+     * @throws \Processus\Spl\Exceptions\FunctionNotImplementedException
      */
     public function getCredentials()
     {
-        // TODO: Implement getCredentials() method.
+        throw new \Processus\Spl\Exceptions\FunctionNotImplementedException();
     }
 
     /**
-     * @param string $host
-     * @param string $port
-     * @param string $username
-     * @param string $password
-     * @return mixed
+     * @return mixed|Auffahrt
      */
-    public function connect($host = "127.0.0.1", $port = "5555", $username = "root", $password = "root")
+    public function connect()
     {
         $this->connected = true;
 
@@ -120,6 +130,25 @@ class Auffahrt implements \Processus\Autobahn\Interfaces\AuffahrtInterface
      */
     public function isConnected()
     {
-        // TODO: Implement isConnected() method.
+        return $this->connected;
+    }
+
+    /**
+     * @param $type
+     * @return mixed|Auffahrt
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }
