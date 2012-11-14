@@ -23,7 +23,7 @@ interface FahrbahnInterface
 
     /**
      * @param VehicleInterface $vehicle
-     * @return \Processus\Autobahn\Autobahn
+     * @return FahrbahnInterface
      */
     public function setVehicle(VehicleInterface $vehicle);
 }
