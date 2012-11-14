@@ -22,10 +22,11 @@ class Autobahn
     private $fahrbahn;
 
     /**
-     * @param $auffahrt
+     * @param Interfaces\AuffahrtInterface $auffahrt
+     *
      * @return Autobahn
      */
-    public function setAuffahrt($auffahrt)
+    public function setAuffahrt(\Processus\Autobahn\Interfaces\AuffahrtInterface $auffahrt)
     {
         $this->auffahrt = $auffahrt;
 
@@ -41,10 +42,11 @@ class Autobahn
     }
 
     /**
-     * @param $fahrbahn
+     * @param Interfaces\FahrbahnInterface $fahrbahn
+     *
      * @return Autobahn
      */
-    public function setFahrbahn($fahrbahn)
+    public function setFahrbahn(\Processus\Autobahn\Interfaces\FahrbahnInterface $fahrbahn)
     {
         $this->fahrbahn = $fahrbahn;
 
@@ -60,13 +62,14 @@ class Autobahn
     }
 
     /**
-     * @param $data
+     * @param array $data
+     *
      * @throws \Exception
      */
-    public function drive($data)
+    public function drive(array $data)
     {
 
-        if ($data) {
+        if ($data && is_array($data)) {
             $vehilce = new \Processus\Autobahn\Base\BaseVehicle($data);
             $this->getFahrbahn()->setVehicle($vehilce);
         } else {
