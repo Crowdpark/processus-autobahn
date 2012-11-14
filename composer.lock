@@ -1,6 +1,51 @@
 {
-    "hash": "e2fa13266a92d7e402c0d3912e4c9a0e",
+    "hash": "f0e47034bd56375808d507beaf824647",
     "packages": [
+        {
+            "name": "fzaninotto/faker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker",
+                "reference": "4508f34a793845acce34588534bce2d645bbf4c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/fzaninotto/Faker/archive/4508f34a793845acce34588534bce2d645bbf4c3.zip",
+                "reference": "4508f34a793845acce34588534bce2d645bbf4c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "1352499089",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Faker": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "faker",
+                "fixtures",
+                "data"
+            ]
+        },
         {
             "name": "processus/spl",
             "version": "dev-master",
@@ -150,6 +195,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "processus/spl": 20
+        "processus/spl": 20,
+        "fzaninotto/faker": 20
     }
 }
