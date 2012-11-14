@@ -6,7 +6,8 @@
  * Time: 12:15 PM
  * To change this template use File | Settings | File Templates.
  */
-$socket = new \ZMQSocket(new \ZMQContext(), \ZMQ::SOCKET_PULL);
+$context = new ZMQContext();
+$socket = new ZMQSocket($context, ZMQ::SOCKET_PULL);
 $socket->bind("tcp://*:5555");
 
 while (TRUE) {
@@ -15,7 +16,7 @@ while (TRUE) {
 
     try {
 
-        $message = $socket->recv(\ZMQ::MODE_NOBLOCK);
+        $message = $socket->recv(ZMQ::MODE_NOBLOCK);
 
         if (empty($message)) {
             continue;

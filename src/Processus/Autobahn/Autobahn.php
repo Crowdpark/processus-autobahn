@@ -72,10 +72,15 @@ class Autobahn
         if ($data && is_array($data)) {
             $vehilce = new \Processus\Autobahn\Base\BaseVehicle($data);
             $this->getFahrbahn()->setVehicle($vehilce);
+            $this->push();
         } else {
             throw new \Exception("Data are not set or not in form!");
         }
 
     }
 
+    protected function push()
+    {
+
+    }
 }

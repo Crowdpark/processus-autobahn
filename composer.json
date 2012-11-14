@@ -20,8 +20,10 @@
         "php":">=5.3",
         "symfony/console":"2.1.*",
         "symfony/config":"2.1.*",
+        "symfony/yaml":"2.1.*",
         "processus/spl":"dev-master",
-        "fzaninotto/faker":"dev-master"
+        "fzaninotto/faker":"dev-master",
+        "react/zmq":"dev-master"
     },
     "minimum-stability":"dev"
 }
