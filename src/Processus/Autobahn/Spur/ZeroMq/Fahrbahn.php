@@ -23,6 +23,7 @@ class Fahrbahn implements \Processus\Autobahn\Interfaces\FahrbahnInterface
 
     /**
      * @param \Processus\Autobahn\Interfaces\AuffahrtInterface $auffahrt
+     *
      * @return \Processus\Autobahn\Interfaces\FahrbahnInterface|void
      */
     public function setAuffahrt(\Processus\Autobahn\Interfaces\AuffahrtInterface $auffahrt)
@@ -42,6 +43,7 @@ class Fahrbahn implements \Processus\Autobahn\Interfaces\FahrbahnInterface
 
     /**
      * @param \Processus\Autobahn\Interfaces\VehicleInterface $vehicle
+     *
      * @return \Processus\Autobahn\Autobahn|void
      */
     public function setVehicle(\Processus\Autobahn\Interfaces\VehicleInterface $vehicle)
@@ -51,6 +53,9 @@ class Fahrbahn implements \Processus\Autobahn\Interfaces\FahrbahnInterface
         return $this;
     }
 
+    /**
+     * @param \Processus\Autobahn\Interfaces\VehicleInterface $vehicle
+     */
     public function push(\Processus\Autobahn\Interfaces\VehicleInterface $vehicle = null)
     {
         if ($vehicle) {
