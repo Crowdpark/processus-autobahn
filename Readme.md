@@ -1,4 +1,7 @@
 processus-autobahn
 ==================
 
-qm lib for zeromq and amqp
+#PROJECT KILLED WASTING TIME IN NOTHING#
+
+One thing which is good i tested i guess the most common sockets :D
+
