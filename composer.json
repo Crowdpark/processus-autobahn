@@ -23,7 +23,7 @@
         "symfony/yaml":"2.1.*",
         "processus/spl":"dev-master",
         "fzaninotto/faker":"dev-master",
-        "react/zmq":"dev-master"
+        "react/zmq":"0.1.0"
     },
     "minimum-stability":"dev"
 }
