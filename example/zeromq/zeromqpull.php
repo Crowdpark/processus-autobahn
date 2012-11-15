@@ -7,12 +7,12 @@
  * To change this template use File | Settings | File Templates.
  */
 $context = new ZMQContext();
-$socket = new ZMQSocket($context, ZMQ::SOCKET_PULL);
+$socket  = new ZMQSocket($context, ZMQ::SOCKET_PULL);
 $socket->bind("tcp://*:5555");
+$totalMessage = 0;
+while (true) {
 
-while (TRUE) {
-
-    usleep(500);
+    sleep(1);
 
     try {
 
@@ -22,7 +22,8 @@ while (TRUE) {
             continue;
         }
 
-        var_dump($message);
+        $totalMessage++;
+        echo $totalMessage++ . PHP_EOL;
 
     } catch (\Exception $error) {
         var_dump($error);

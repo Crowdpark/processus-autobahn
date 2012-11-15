@@ -17,6 +17,7 @@ $push = $context->getSocket(ZMQ::SOCKET_PUSH);
 $push->connect('tcp://127.0.0.1:5555');
 
 $i = 0;
+
 $loop->addPeriodicTimer(1, function () use (&$i, $push)
 {
     $i++;
